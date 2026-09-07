@@ -1,12 +1,10 @@
-# 🎫 IT Support Ticket Priority Prediction
+# IT Support Ticket Priority Prediction
 
-> End-to-end Machine Learning project that predicts the priority level of IT support tickets using **XGBoost**.
+> End-to-end Machine Learning project that predicts the priority level of IT support tickets using ML Models.
 
----
+## Project Description
 
-## 📌 Project Overview
-
-Efficient ticket prioritization is essential for IT support teams. Misclassifying critical incidents can lead to increased downtime, financial losses, SLA violations, and poor customer experience.
+Efficient ticket and task prioritization is essential for IT support teams. Misclassifying critical incidents can lead to increased downtime, financial losses, SLA violations, and poor customer experience.
 
 This project develops a multiclass classification model capable of automatically predicting whether an IT support ticket should be classified as **Low**, **Medium**, or **High** priority based on operational, technical, and customer-related information.
 
@@ -22,9 +20,7 @@ The project covers the complete Machine Learning workflow, including:
 
 The final model is based on **XGBoost**, achieving an overall accuracy of **96.97%** on unseen data.
 
----
-
-## 🎯 Business Problem
+## Business Problem
 
 Large organizations receive thousands of IT support tickets every day.
 
@@ -38,13 +34,11 @@ Incorrect ticket prioritization can cause:
 
 This project demonstrates how Machine Learning can automate ticket prioritization, helping support teams respond faster and allocate resources more efficiently.
 
----
-
-## 📊 Dataset
+## Dataset
 
 The dataset contains **50,000 simulated IT support tickets** from different industries, regions, customer tiers, and product areas.
 
-### 🎯 Target Variable
+###  Target Variables to work
 
 | Priority |
 |----------|
@@ -52,7 +46,7 @@ The dataset contains **50,000 simulated IT support tickets** from different indu
 | Medium |
 | High |
 
-### 📋 Main Features
+### Main Features
 
 - Company Size
 - Customer Tier
@@ -68,9 +62,7 @@ The dataset contains **50,000 simulated IT support tickets** from different indu
 - Customer Sentiment
 - User Role Reporting the Incident
 
----
-
-## 🛠️ Project Workflow
+## Project Workflow
 
 The project follows a complete end-to-end Machine Learning pipeline, from raw data exploration to model inference.
 
@@ -124,7 +116,7 @@ The project is organized into four Jupyter notebooks:
 | `03_model_training.ipynb` | Model training, evaluation, comparison, and feature importance |
 | `04_model_inference.ipynb` | Load the trained model and predict the priority of new support tickets |
 
-## 📂 Project Structure
+## Project Structure
 
 ```text
 IT-Support-Ticket-Priority-Prediction
@@ -167,7 +159,7 @@ IT-Support-Ticket-Priority-Prediction
 | **requirements.txt** | Python dependencies required to reproduce the project. |
 | **.gitignore** | Files and folders excluded from version control. |
 
-## 🔍 Exploratory Data Analysis (EDA)
+##  Exploratory Data Analysis (EDA)
 
 The first stage of the project focused on understanding the dataset and identifying patterns that could influence ticket priority.
 
@@ -184,7 +176,7 @@ The analysis included:
 
 ### Main Findings
 
-- The dataset contains **50,000 support tickets**.
+- The dataset contains 50,000 support tickets**.
 - The target variable is moderately imbalanced:
   - **Low:** 50%
   - **Medium:** 35%
@@ -195,7 +187,7 @@ The analysis included:
 
 The exploratory analysis guided the preprocessing strategy and confirmed that the dataset was suitable for supervised machine learning.
 
-## ⚙️ Data Preprocessing
+## Data Preprocessing
 
 The preprocessing pipeline was designed to prepare the dataset for machine learning while preventing data leakage.
 
@@ -211,13 +203,13 @@ The preprocessing pipeline was designed to prepare the dataset for machine learn
 
 ### Output
 
-- Training samples: **40,000**
-- Testing samples: **10,000**
-- Final feature set: **49 features**
+- Training samples: 40,000
+- Testing samples: 10,000
+- Final feature set: 49 features
 
 The fitted `StandardScaler` was exported as a `.pkl` file to ensure consistent preprocessing during inference.
 
-## 🤖 Model Training
+##  Model Training
 
 Five classification models were trained and evaluated to identify the best-performing solution for predicting ticket priority.
 
@@ -237,7 +229,7 @@ Each model was evaluated using:
 - F1-Score (Weighted)
 - Training Time
 
-## 📈 Model Performance
+##  Model Performance
 
 | Model | Accuracy | Precision | Recall | F1 Score | Training Time (s) |
 |------|---------:|----------:|--------:|----------:|------------------:|
@@ -245,7 +237,7 @@ Each model was evaluated using:
 | Logistic Regression | 0.8630 | 0.8625 | 0.8630 | 0.8624 | 0.2392 |
 | Decision Tree | 0.9169 | 0.9172 | 0.9169 | 0.9170 | 0.1472 |
 | Random Forest | 0.9280 | 0.9289 | 0.9280 | 0.9278 | 0.7103 |
-| **XGBoost** ⭐ | **0.9697** | **0.9698** | **0.9697** | **0.9697** | **1.0761** |
+| **XGBoost**  | **0.9697** | **0.9698** | **0.9697** | **0.9697** | **1.0761** |
 
 ![Model Performance](reports/figures/model_performance.png)
 
@@ -253,11 +245,11 @@ Each model was evaluated using:
 
 ### Best Model
 
-XGBoost achieved the highest performance across all evaluation metrics, obtaining an overall accuracy of **96.97%** while maintaining excellent precision, recall, and F1-score.
+XGBoost achieved the highest performance across all evaluation metrics, obtaining an overall accuracy of 96.97% while maintaining excellent precision, recall, and F1-score.
 
 Although XGBoost required slightly longer training time than simpler models, the performance improvement justified selecting it as the final production model.
 
-## ⭐ Feature Importance
+##  Feature Importance
 
 One advantage of XGBoost is its ability to estimate the importance of each feature used during prediction.
 
@@ -280,7 +272,7 @@ These results are aligned with real-world IT support operations, where incidents
 
 ![Feature Importance](reports/figures/feature_importance.png)
 
-## 🧪 Model Inference
+## Model Inference
 
 The final stage of the project demonstrates how the trained model can be used to predict the priority of new IT support tickets.
 
@@ -312,7 +304,7 @@ This chart shows the probability assigned by the model to each class for a sampl
 
 ![Confusion Matrix](reports/figures/xgboost_confusion_matrix.png)
 
-## 💻 Technologies Used
+## Technologies Used
 
 | Category | Technologies |
 |----------|--------------|
@@ -324,7 +316,7 @@ This chart shows the probability assigned by the model to each class for a sampl
 | Development Environment | Jupyter Notebook, VS Code |
 | Version Control | Git & GitHub |
 
-## 🚀 How to Run
+## How to see the project work
 
 ### 1. Clone the repository
 
@@ -377,7 +369,7 @@ Open the notebooks in numerical order:
 3. `03_model_training.ipynb`
 4. `04_model_inference.ipynb`
 
-## 📌 Future Improvements
+## Future Improvements
 
 Potential future enhancements include:
 
@@ -388,11 +380,11 @@ Potential future enhancements include:
 - Explainability using SHAP values.
 - Continuous model retraining with new ticket data.
 
-## 👤 Author
+## Author
 
 **Eduardo Torres**
 
-Machine Learning and Data Analytics enthusiast with experience in technical support, cloud technologies, and predictive analytics.
+AI Engineer and Data Analyst, with experience in technical support, cloud technologies, and predictive analytics.
 
-- GitHub: *(Add your GitHub profile here)*
-- LinkedIn: *(Add your LinkedIn profile here)*
+- GitHub: *edut1228-IA*
+- LinkedIn: *https://www.linkedin.com/in/eduardo-torres-a6208a365/*
